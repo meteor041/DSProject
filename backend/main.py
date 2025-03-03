@@ -32,7 +32,7 @@ async def deepseek_api(query: Query):
         # 调用 DeepSeek 官方 API
         deepseek_response = requests.post(
             DEEPSEEK_API_URL,
-            headers={"Authorization": f"Bearer sk-b3b97a6399e04c50953f5dd37753627c"},
+            headers={"Authorization": f"Bearer {API_KEY}"},
             json={
                 "messages": [{"role": "user", "content": query.prompt}],
                 "model": "deepseek-chat",
